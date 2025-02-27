@@ -1,14 +1,14 @@
 {
-  "name": "vscode-zig",
+  "name": "vscode-anyzig",
   "displayName": "Zig Language",
-  "description": "Language support for the Zig programming language",
-  "version": "0.6.4",
-  "publisher": "ziglang",
+  "description": "Language support for any version of the Zig programming language",
+  "version": "0.0.1",
+  "publisher": "marler8997",
   "icon": "images/zig-icon.png",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ziglang/vscode-zig"
+    "url": "https://github.com/marler8997/vscode-anyzig"
   },
   "engines": {
     "vscode": "^1.80.0"
@@ -109,11 +109,6 @@
           "scope": "machine-overridable",
           "type": "string",
           "description": "Set a custom path to the `zig` executable. Example: `C:/zig-windows-x86_64-0.13.0/zig.exe`. The string \"zig\" means lookup zig in PATH."
-        },
-        "zig.version": {
-          "scope": "resource",
-          "type": "string",
-          "description": "Specify which Zig version should be installed. Takes priority over a `.zigversion` file or a `build.zig.zon` with `minimum_zig_version`."
         },
         "zig.formattingProvider": {
           "scope": "resource",
@@ -330,11 +325,6 @@
         "title": "Build Workspace",
         "category": "Zig",
         "description": "Build the current project using 'zig build'"
-      },
-      {
-        "command": "zig.install",
-        "title": "Install Zig",
-        "category": "Zig Setup"
       },
       {
         "command": "zig.zls.enable",
