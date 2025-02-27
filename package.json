@@ -1,0 +1,47 @@
+{
+  "name": "vscode-anyzig",
+  "displayName": "Zig Language",
+  "description": "Language support for any version of the Zig programming language",
+  "version": "0.0.1",
+  "publisher": "marler8997",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "workspaceContains:build.zig",
+    "workspaceContains:build.zig.zon"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "hello.sayHello",
+        "title": "Say Hello"
+      }
+    ],
+    "languages": [
+      {
+        "id": "zig",
+        "extensions": [
+          ".zig",
+          ".zon"
+        ],
+        "aliases": [
+          "Zig"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "vscode-languageclient": "^8.0.2"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/node": "^16.11.7"
+  }
+}
